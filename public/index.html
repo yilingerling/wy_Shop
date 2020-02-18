@@ -7,8 +7,38 @@
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
+  <style>
+    html,body,#app{
+      margin: 0;
+      padding: 0;
+    }
+  </style>
   <body>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <script>
+       function remRefresh(){
+          let clientWidth = document.documentElement.clientWidth;
+        
+          let rem = clientWidth / 10;
+
+          document.documentElement.style.fontSize = rem + "px"
+
+          document.body.style.fontSize = "16px"
+        }
+
+
+        window.addEventListener("pageshow",() => {
+          remRefresh()
+        })
+        let timeoutId
+        window.addEventListener("resize",() => {
+          timeoutId && clearTimeout(timeoutId)
+          timeoutId = setTimeout(() => {
+            remRefresh()
+          },1000)
+         
+        })
+    </script>
   </body>
 </html>
