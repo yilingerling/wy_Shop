@@ -34,7 +34,7 @@
         display flex
         .guideItem
             width 20%
-            height 48px
+            height 50px
             text-align center
             
  
