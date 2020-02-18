@@ -1,9 +1,8 @@
-const px2rem = require('postcss-px2rem')
+const px2rem = require("postcss-px2rem")
 // 配置postcs-px2rem
 const postcss = px2rem({
-  remUnit: 75   // 设计稿10等分之后的值
+  remUnit:75
 })
-
 
 
 module.exports = {

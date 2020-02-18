@@ -50,7 +50,7 @@
             width 20%       
             text-align center
             .iconfont
-                padding-top 10px
+                padding-top 16px
                 font-size 42px
  
 </style>
