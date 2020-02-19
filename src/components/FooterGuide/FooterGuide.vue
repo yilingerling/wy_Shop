@@ -36,6 +36,7 @@
 
 <style scoped lang="stylus">
     #footerContainer 
+        background #fff
         width 100%
         height 98px
         line-height 42px

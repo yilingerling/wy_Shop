@@ -6,7 +6,7 @@ import Personal from '../pages/Personal/Personal.vue'
 
 export default [
     {
-        path: "/home",
+        path: "/",
         component: Home
     },
     {
