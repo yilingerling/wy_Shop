@@ -10,6 +10,10 @@ export default [
         component: Home
     },
     {
+        path: "/Home",
+        component: Home
+    },
+    {
         path: "/classification",
         component: Classification
     },

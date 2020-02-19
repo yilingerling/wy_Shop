@@ -174,11 +174,15 @@
 
 <script type="text/ecmascript-6">
   import BScroll from 'better-scroll'
+  import {getSwpers} from "../../api"
   export default {
-    mounted() {
+    async mounted() {
       new BScroll(".homeCenter",{
         scrollX: true
       })
+
+      let result = await getSwpers()
+      console.log(result);
     },
   }
      window.onload = function() {
