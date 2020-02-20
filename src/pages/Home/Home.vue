@@ -159,13 +159,77 @@
           <img src="../../images/new.png" alt="">
         </div>
         <div class="newImg2">
-          <p>福利社</p>
-          <span>今日特价</span>
-          <img src="../../images/new2.png" alt="">
+          <div class="n21">
+            <p>福利社</p>
+            <p>今日特价</p>
+          </div>
+          <div class="n22">
+            <img src="../../images/new2.png" alt="">
+          </div>
+          
         </div>
         <div class="newImg3">
           <p>新人拼团</p>
           <span>1元起包邮</span>
+        </div>
+      </div>
+      <!-- 类目热销榜 -->
+      <div class="Category">
+        <div class="CategoryTop">
+          <div class="CategoryTLeft">
+            <div>
+              <p>热销榜</p>
+              <span>-</span>
+            </div>
+             <div>
+              <img src="" alt="">
+            </div>
+          </div>
+          <div class="CategoryTRight">
+            <div>
+              <p>好评榜</p>
+              <span>-</span>
+            </div>
+             <div>
+              <img src="" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="CategoryBottom">
+          <ul class="ulList">
+            <li class="liItem">
+              <p></p>
+              <img src="" alt="">
+            </li>
+            <li class="liItem">
+              <p></p>
+              <img src="" alt="">
+            </li>
+            <li class="liItem">
+              <p></p>
+              <img src="" alt="">
+            </li>
+            <li class="liItem">
+              <p></p>
+              <img src="" alt="">
+            </li>
+            <li class="liItem">
+              <p></p>
+              <img src="" alt="">
+            </li>
+            <li class="liItem">
+              <p></p>
+              <img src="" alt="">
+            </li>
+            <li class="liItem">
+              <p></p>
+              <img src="" alt="">
+            </li>
+            <li class="liItem">
+              <p></p>
+              <img src="" alt="">
+            </li>
+          </ul>
         </div>
       </div>
       <div class="homeBottom"></div>
@@ -422,4 +486,65 @@
           color #333333
           line-height 90px
           box-sizing border-box
+    .newPerson2
+      width 750px
+      height 440px
+      display inline-block
+      padding-left 30px
+      .newImg1
+        width 340px
+        height 440px
+        box-sizing border-box
+        text-align center
+        padding-top 40px
+        margin-right 6px
+        background #F9E9CF
+        p
+          width 200px
+          height 48px
+          font-size 32px
+          margin-bottom 30px
+          margin-left 30px   
+      .newImg2
+        width 344px
+        height 218px
+        background #fff
+        margin-bottom 4px
+        background #FBE2D3
+        .n21
+          width 110px
+          float left
+          margin 30px 0 0 30px       
+          p
+            font-size 34px
+          p:nth-child(n+2)
+            font-size 25px
+            color #7F7F7F
+            margin-top 10px
+        .n22
+          margin-top 15px
+          width 200px
+          height 200px
+          float left
+          img
+            width 200px
+            height 200px
+      .newImg3
+        width 344px
+        height 218px
+        background #FFECC2
+        box-sizing border-box
+        padding-top 25px
+        padding-left 30px
+        p
+          font-size 31px
+          margin-bottom 10px
+        span
+          box-sizing border-box
+          padding 0 5px 0 5px
+          color #fff
+          border-radius 5px
+          background rgba(0,0,0,.2)
+      .newImg1,.newImg2,.newImg3
+        float left              
 </style>
