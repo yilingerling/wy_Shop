@@ -1,0 +1,1 @@
+export const GET_SWPER = "get_swper"
