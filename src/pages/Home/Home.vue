@@ -58,30 +58,38 @@
       <div class="twos">
         <ul class="twoListone" v-if="address.kingKongModule">
           <li class="twoItemone"  v-for="(item,index) in address.kingKongModule.kingKongList" :key="index">
+            <a :href="item.schemeUrl">
             <span>
               <img :src="item.picUrl" alt="">
             </span>
             <p>{{item.text}}</p>
+            </a>
           </li>
           
         </ul>
       
       </div>
       <!-- 蓝色大块 -->
-      <div class="blueBox">
-        <img class="img1" src="../../images/bule.png" alt="">
-        <img class="img2" src="../../images/bules.png" alt="">
+      <div class="blueBox" v-if="address.bigPromotionModule">
+        <img class="img1" :src="address.bigPromotionModule.floorList[0].cells[0].picUrl" alt="">
+        <div class="img2" >
+            <img :src="address.bigPromotionModule.floorList[0].cells[0].itemList[this.num].picUrl" alt="">
+          <span>
+            ¥{{address.bigPromotionModule.floorList[0].cells[0].itemList[this.num].counterPrice}}
+          </span>
+        </div>
+        
         <div class="inTwo">
           <div class="inTwo1">
-            <img src="../../images/blue2.png" alt="">
+            <img :src="address.bigPromotionModule.floorList[1].cells[0].picUrl" alt="">
           </div>
           <div class="inTwo2">
-            <img src="../../images/bule3.png" alt="">
-            <img class="sos" src="../../images/bule3.png" alt="">
+            <img :src="address.bigPromotionModule.floorList[2].cells[0].picUrl" alt="">
+            <img class="sos" :src="address.bigPromotionModule.floorList[2].cells[1].picUrl" alt="">
           </div>
           <div class="inTwo3">
-            <img src="../../images/bule3.png" alt="">
-            <img class="sos" src="../../images/bule3.png" alt="">
+            <img :src="address.bigPromotionModule.floorList[3].cells[0].picUrl" alt="">
+            <img class="sos" :src="address.bigPromotionModule.floorList[3].cells[1].picUrl" alt="">
           </div>
         </div>
       </div>
@@ -442,6 +450,11 @@
   import BScroll from 'better-scroll'
   import {getSwpers} from "../../api"
   export default {
+    data(){
+      return{
+        num : 1
+      }
+    },
     async mounted() {
       new BScroll(".homeCenter",{
         scrollX: true
@@ -451,6 +464,14 @@
       //this.$store.commit("get_swper")
         this.$store.dispatch("getAddressAction")
      //console.log(result);
+      setInterval(() => {
+    this.num++
+    if(num >= 10){
+      this.num = 0
+    }
+    // console.log("定时器的值"+num);
+  },2000)   
+
     },
     computed: {
      // ...mapState([address]) //不能自定义key
@@ -459,6 +480,7 @@
        address: state => state.address
      })
     },
+    
   }
   window.onload = function() {
     var mySwiper = new Swiper ('.swiper-container', {
@@ -469,7 +491,12 @@
     pagination: '.swiper-pagination'
  
     
-  })        
+  })     
+
+ 
+    // console.log(this.data.address.bigPromotionModule.floorList[0].cells[0].itemList[this.num]);
+  
+
  }
 </script>
 
@@ -648,8 +675,24 @@
         width 168px
         height 168px 
         position absolute
-        top 50px
+        top 30px
         left 75px
+        img
+          width 168px
+          height 168px 
+        span 
+          box-sizing border-box
+          padding-top 5px
+          font-size 20px
+          text-align center
+          width 152px
+          height 30px
+          background #F49422
+          position absolute
+          top 140px
+          left 10px
+          border-radius 15px
+          color #FFFFFF
       .inTwo
         width 750px
         .inTwo1
