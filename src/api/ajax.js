@@ -3,7 +3,8 @@ import qs from "qs"
 
 // 1.生成Axios的伪实例
 const instance = axios.create({
-    baseURL: "/api"
+    baseURL: "/api",//设置请求得基本路径
+    timeout: 10000 //设置超时时间
 })
 
 // // 2.添加请求拦截器

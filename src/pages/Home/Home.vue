@@ -12,17 +12,17 @@
       <!-- 横向滚动 -->
       <div class="homeCenter">
         <ul class="navList">
-          <li class="navItem active">推荐</li>
-          <li class="navItem">居家生活</li>
-          <li class="navItem">服饰鞋包</li>
-          <li class="navItem">美食酒水</li>
-          <li class="navItem">个人清洁</li>
-          <li class="navItem">母子亲子</li>
-          <li class="navItem">运动旅行</li>
-          <li class="navItem">数码家电</li>
-          <li class="navItem">全球特色</li>
-          <li class="navItem">数码家电</li>
-          <li class="navItem">全球特色</li>
+          <li class="navItem "><span class="active">推荐</span></li>
+          <li class="navItem"><span>居家生活</span></li>
+          <li class="navItem"><span>服饰鞋包</span></li>
+          <li class="navItem"><span>美食酒水</span></li>
+          <li class="navItem"><span>个人清洁</span></li>
+          <li class="navItem"><span>母子亲子</span></li>
+          <li class="navItem"><span>运动旅行</span></li>
+          <li class="navItem"><span>数码家电</span></li>
+          <li class="navItem"><span>全球特色</span></li>
+          <li class="navItem"><span>数码家电</span></li>
+          <li class="navItem"><span>全球特色</span></li>
         </ul>
         <span class="smallBtn iconfont icon-xia"></span>
       </div>
@@ -452,7 +452,7 @@
   export default {
     data(){
       return{
-        num : 1
+        num : 0
       }
     },
     async mounted() {
@@ -466,7 +466,7 @@
      //console.log(result);
       setInterval(() => {
     this.num++
-    if(num >= 10){
+    if(this.num >= 10){
       this.num = 0
     }
     // console.log("定时器的值"+num);
@@ -518,7 +518,7 @@
         background #EEEEEE
     .homeTop
       width 750px
-      height 150px
+      height 170px
       background #fff
       padding 16px 30px
       display flex
@@ -569,7 +569,7 @@
       left 0
       z-index 9
       margin-top 90px
-      height 60px
+      height 80px
       width 100%
       overflow hidden
       display flex
@@ -587,24 +587,26 @@
           text-align center
           box-sizing border-box
           position relative
-        .active:after
-          position absolute
-          bottom  0px
-          left 0
-          content ""
-          display block
-          width 100%
-          height 5px
-          background red
-        .active
-          color #DD1A21
+          span
+            display block
+          .active:after
+            position absolute
+            bottom  0px
+            left 0
+            content ""
+            display block
+            width 100%
+            height 5px
+            background red
+          .active
+            color #DD1A21
       .smallBtn  
         width 100px
         height 60px 
         line-height 60px
         background #fff
         position absolute
-        top 0
+        top 20px
         right 0 
         display block
         text-align center
@@ -614,7 +616,7 @@
     .swiper-container 
       width 750px
       height 370px
-      margin-top 150px
+      margin-top 170px
       .swiper-slide > img 
         width 750px
         height 370px
@@ -765,7 +767,10 @@
           height 48px
           font-size 32px
           margin-bottom 30px
-          margin-left 30px   
+          margin-left 30px
+        img
+          width 258px
+          height 257px   
       .newImg2
         width 344px
         height 218px
@@ -849,6 +854,9 @@
             width 200px
             height 100%
             float right
+            img 
+              width 200px
+              height 200px
         .CategoryTRight
           width 340px
           height 100%      
@@ -873,6 +881,9 @@
             width 200px
             height 100%
             float right
+            img 
+              width 200px
+              height 200px
       .CategoryBottom
         width 100%
         height 400px

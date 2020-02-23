@@ -3,19 +3,25 @@ import Classification from '../pages/Classification/Classification.vue'
 import Good from '../pages/Good/Good.vue'
 import Commodity from '../pages/Commodity/Commodity.vue'
 import Personal from '../pages/Personal/Personal.vue'
-
+import CRight from "../pages/Classification/cRight.vue"
 export default [
     {
         path: "/",
         component: Home
     },
     {
-        path: "/Home",
+        path: "/home",
         component: Home
     },
     {
         path: "/classification",
-        component: Classification
+        component: Classification,
+        children:[
+            {
+                path: "/classification/cRight/:id",
+                component: CRight
+            }
+        ]
     },
     {
         path: "/good",
@@ -29,4 +35,5 @@ export default [
         path: "/personal",
         component: Personal
     },
+    
 ]

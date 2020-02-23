@@ -24,11 +24,11 @@ router.get('/indexCateModule', (ctx, next) => {
   ctx.set("Access-Control-Allow-Origin","*")
   ctx.body = indexCateModuleData
 });
-router.get('/cateLists', (ctx, next) => {
+router.get('/getCateLists', (ctx, next) => {
   ctx.set("Access-Control-Allow-Origin","*")
   ctx.body = cateListsData
 });
-router.get('/cateNavDatas', (ctx, next) => {
+router.get('/getCateNavDatas', (ctx, next) => {
   ctx.set("Access-Control-Allow-Origin","*")
   ctx.body = cateNavDatasData
 });
