@@ -33,6 +33,9 @@
       padding 10px 30px
       width 750px
       height 90px
+      border-bottom 1px solid #D9D9D9
+      position fixed
+      background #FFFFFF
       .tt
         border-radius 5px
         box-sizing border-box
@@ -54,6 +57,7 @@
       .cLeft
         width 165px
         height 100%
+        border-right 1px solid #D9D9D9
       .cRight
         width 585px
         height 100%

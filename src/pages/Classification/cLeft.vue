@@ -8,13 +8,14 @@
           </li>
       </ul>
   </div>
-</template>
+</template> 
 
 <script type="text/ecmascript-6">
   export default {
       data(){
             return {
-                navList: []
+                navList: [],
+                active : "active"
             }
         },
     async mounted() {
@@ -23,22 +24,26 @@
 
        this.navList = result.categoryL1List
 
-       this.$router.push(`/classification/cRight/${this.navList[0].id}`)
+       this.$router.push(`/Classification/cRight/${this.navList[0].id}`)
+
+      
     },
   }
+
+
 </script>
 
 <style lang="stylus">
 
     div
-        .navList       
+        .navList             
             li
                 width 165px
                 height 50px
                 line-height 50px
                 font-size 28px
                 text-align center
-                margin-top 20px
-                
-
+                margin-top 40px
+    
+    
 </style>

@@ -1,22 +1,22 @@
 <template>
   <div id="footerContainer">
-      <div @click="goPath('/home')" class="guideItem">
+      <div :class='{guideItem: $route.path === "/home"}' @click="goPath('/home')">
         <span class="iconfont icon-shouye"></span>
           <span class="txt">首页</span>
       </div>
-      <div @click="goPath('/classification')" class="guideItem">
+      <div :class='{guideItem:RegExp(/classification/).test(this.$route.path)}' @click="goPath('/classification')">
       <span class="iconfont icon-leimupinleifenleileibie1"></span>
           <span>分类</span>
       </div>
-      <div @click="goPath('/good')" class="guideItem">
+      <div :class='{guideItem: $route.path === "/good"}' @click="goPath('/good')">
       <span class="iconfont icon-zhidemai2"></span>
           <span>值得买</span>
       </div>
-      <div @click="goPath('/commodity')" class="guideItem">
+      <div :class='{guideItem: $route.path === "/commodity"}' @click="goPath('/commodity')" >
       <span class="iconfont icon-che"></span>
           <span>购物车</span>
       </div>
-      <div @click="goPath('/personal')" class="guideItem">
+      <div :class='{guideItem: $route.path === "/personal"}' @click="goPath('/personal')">
       <span class="iconfont icon-renwu"></span>
           <span>个人</span>
       </div>
@@ -45,7 +45,8 @@
         position fixed
         left 0
         bottom 0
-        .guideItem
+        
+        div
             display flex
             flex-direction column
             width 20%       
@@ -55,4 +56,6 @@
                 font-size 42px
             .icon-zhidemai2
                 font-size 50px
+            &.guideItem
+                color red
 </style>

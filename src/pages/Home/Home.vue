@@ -448,6 +448,8 @@
 <script type="text/ecmascript-6">
   import {mapState} from "vuex"
   import BScroll from 'better-scroll'
+  import Swiper from 'swiper'
+  // eslint-disable-next-line no-unused-vars
   import {getSwpers} from "../../api"
   export default {
     data(){
@@ -472,6 +474,16 @@
     // console.log("定时器的值"+num);
   },2000)   
 
+      new Swiper ('.swiper-container', {
+        direction: 'horizontal', // 垂直切换选项
+        loop: true,
+        // 如果需要分页器
+        pagination: {
+          el: '.swiper-pagination',
+        },
+        
+      })    
+
     },
     computed: {
      // ...mapState([address]) //不能自定义key
@@ -482,22 +494,14 @@
     },
     
   }
-  window.onload = function() {
-    var mySwiper = new Swiper ('.swiper-container', {
-    direction: 'horizontal', // 垂直切换选项
-    loop: true, // 循环模式选项
-    
-    // 如果需要分页器
-    pagination: '.swiper-pagination'
- 
-    
-  })     
 
+
+  
  
     // console.log(this.data.address.bigPromotionModule.floorList[0].cells[0].itemList[this.num]);
   
 
- }
+ 
 </script>
 
 <style lang="stylus">
@@ -520,7 +524,7 @@
       width 750px
       height 170px
       background #fff
-      padding 16px 30px
+      padding 16px 30px 0px 30px
       display flex
       box-sizing border-box
       position fixed
@@ -565,23 +569,22 @@
           color #666
     .homeCenter 
       position fixed
-      top 0
+      top -10px
       left 0
       z-index 9
       margin-top 90px
-      height 80px
       width 100%
+      height 100px   
       overflow hidden
       display flex
       .navList
         display flex
-        height 60px
+        height 80px
         font-size 30px
         padding 0 120px 0 30px
         background #fff
         .navItem
-          height 100%
-          line-height 60px
+          line-height 30px
           white-space nowrap
           padding 0 16px
           text-align center
