@@ -4,8 +4,7 @@
           <span class="iconfont icon-shouye span1"></span>
           <span class="span2">值得买</span>
           <span class="iconfont icon-che span4"></span>
-          <span class="iconfont icon-fangdajing span3"></span>
-          
+          <span class="iconfont icon-fangdajing span3"></span>        
       </div>
       <div class="content">
         <div class="cHeader">

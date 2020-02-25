@@ -69,7 +69,9 @@
             width 528px
             height 192px 
             margin 90px 0 20px 0
-
+            img 
+                width 539px
+                height 196px
         .ulOne
             width 528px
             background red
